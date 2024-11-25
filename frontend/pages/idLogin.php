@@ -9,17 +9,23 @@ include "..\components\header.php";
         <div class="card">
           <div class="card-content">
             <span class="card-title">Login</span>
-            <form action="login.php" method="post">
+            <?php
+            session_start();
+              if (isset($_SESSION['error_message'])) {
+                echo '<div class="error">' . $_SESSION['error_message'] . '</div>';
+                unset($_SESSION['error_message']);
+              }
+              session_destroy()
+            ?>
+            <form action="..\..\src\idLogin.php" method="post">
               <div class="input-field">
-                <input type="text" name="username" id="username" required>
-                <label for="username">Benutzername</label>
-              </div>
-              <div class="input-field">
-                <input type="password" name="password" id="password" required>
-                <label for="password">Passwort</label>
+                <input type="text" name="employeeID" id="employeeID" required>
+                <label for="employeeID">Mitarbeiternummer</label>
               </div>
               <button class="btn waves-effect waves-light" type="submit" name="submit">Anmelden</button>
             </form>
+            <br>
+            <p>Karte vergessen? <a href="userLogin.php">Zum Login</a></p>
           </div>
         </div>
       </div>
