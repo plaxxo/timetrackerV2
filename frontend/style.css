@@ -1,3 +1,23 @@
+/* Login */
 .error {
     color: red;
+}
+
+
+/* Navbar */
+@media (min-width: 1200px) {
+    .brand-logo {
+        margin-left: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .brand-logo {
+        margin-left: 45%;
+    }
+}
+
+.nav-content .tabs {
+    display: flex;
+    justify-content: center;
 }
