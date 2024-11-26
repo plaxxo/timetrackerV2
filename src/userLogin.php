@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     } else {
         session_start();
-        $_SESSION['error_message'] = "Invalid username or password.";
+        $_SESSION['error_message'] = "Benutzername oder Passwort nicht gefunden";
         header("Location: /frontend/pages/userLogin.php");
         exit();
     }
