@@ -29,7 +29,7 @@ include "..\components\header.php";
               <button class="btn waves-effect waves-light" type="submit" name="submit">Anmelden</button>
             </form>
             <br>
-            <p>Karte dabei? <a href="idLoginPage.php">Zum Login</a></p>
+            <p>Karte dabei? <a class="blue-text text-darken-4" href="idLoginPage.php">Zum Login</a></p>
           </div>
         </div>
       </div>
