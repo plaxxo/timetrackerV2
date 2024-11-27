@@ -51,4 +51,6 @@ body {
     background-repeat: no-repeat;
     backdrop-filter: blur(10px);
     height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }

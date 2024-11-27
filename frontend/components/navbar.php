@@ -11,7 +11,7 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="../pages/dashboardPage.php">Dashboard</a></li>
                     <li><a href="../pages/overviewPage.php">Übersicht</a></li>
-                    <li><a href="collapsible.html"
+                    <li><a href="../pages/profilPage.php"
                            class="<?php if (isset($_SESSION['is_checked_in'])) {
                                     if ($_SESSION['is_checked_in'] === true) {
                                     echo 'green';

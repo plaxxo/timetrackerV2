@@ -9,17 +9,14 @@ if ($conn->connect_error) {
 
 session_start();
 
-// Assuming the user is authenticated and their ID is stored in the session
 $userId = $_SESSION['user_id'];
 
-// Check if the user is already checked in
 $stmt = $conn->prepare("SELECT * FROM time_entries WHERE user_id = ? AND clock_out IS NULL AND DATE(clock_in) = CURDATE()");
 $stmt->bind_param("i", $userId);
 $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
-    // User is checked in, update the clock_out time
     $stmt = $conn->prepare("UPDATE time_entries SET clock_out = NOW() WHERE user_id = ? AND clock_out IS NULL AND DATE(clock_in) = CURDATE()");
     $stmt->bind_param("i", $userId);
     $stmt->execute();

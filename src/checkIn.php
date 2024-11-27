@@ -9,8 +9,6 @@ if ($conn->connect_error) {
 
 session_start();
 
-
-// Assuming the user is authenticated and their ID is stored in the session
 $userId = $_SESSION['user_id'];
 
 $stmt = $conn->prepare("SELECT * FROM time_entries WHERE user_id = ? AND clock_out IS NULL AND DATE(clock_in) = CURDATE()");
@@ -19,7 +17,6 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows == 0) {
-    // User is not checked in, insert a new time entry
     $stmt = $conn->prepare("INSERT INTO time_entries (user_id, clock_in, date) VALUES (?, NOW(), CURDATE())"); // Use CURDATE()
     $stmt->bind_param("i", $userId);
     $stmt->execute();

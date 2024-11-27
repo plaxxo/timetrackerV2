@@ -3,8 +3,8 @@ include "..\components\header.php";
 include "../components/navbar.php";
 
 
-date_default_timezone_set('Europe/Berlin'); // Set timezone to Berlin
-$hour = date('G'); // Get the current hour (0-23)
+date_default_timezone_set('Europe/Berlin');
+$hour = date('G');
 if ($hour >= 6 && $hour < 11) {
     $greeting = "Guten Morgen";
 } elseif ($hour >= 11 && $hour < 18) {
@@ -29,22 +29,29 @@ if ($hour >= 6 && $hour < 11) {
                             <?php endif; ?>
                             </span>
                         <span class="card-title" id="current-time"></span>
-
                         <script>
                             function updateTime() {
                                 const now = new Date();
+
+                                const day = now.getDate().toString().padStart(2, '0');
+                                const month = (now.getMonth() + 1).toString().padStart(2, '0');
+                                const year = now.getFullYear();
+
                                 const hours = now.getHours().toString().padStart(2, '0');
                                 const minutes = now.getMinutes().toString().padStart(2, '0');
                                 const seconds = now.getSeconds().toString().padStart(2, '0');
+
+                                const dateString = `${day}.${month}.${year}`;
                                 const timeString = `${hours}:${minutes}:${seconds}`;
-                                document.getElementById('current-time').textContent = timeString;
+
+                                document.getElementById('current-time').textContent = `${dateString} ` + ` -` +` ${timeString}`;
                             }
 
-                            setInterval(updateTime, 1000); // Update every 1000ms (1 second)
+                            setInterval(updateTime, 1000);
                         </script>
                     </div>
                     <blockquote>
-                        This is an example quotation that uses the blockquote tag.
+                        Deine Arbeitszeiten im Blick! Starte jetzt einen neuen Eintrag oder sieh dir deine bisherigen Arbeitszeiten an.
                     </blockquote>
                 </div>
             </div>
@@ -62,7 +69,15 @@ if ($hour >= 6 && $hour < 11) {
                     </div>
                 </div>
                 <div class="col s4">
-
+                        <div class="card-deck">
+                            <div class="card grey lighten-4">
+                                <div class="card-content">
+                                    <span class="card-title">Verbleibende Zeit</span>
+                                    <p></p>
+                                    <p>Heute: <?= $_SESSION['hours_left_today'] ?> Stunden</p>
+                                </div>
+                            </div>
+                        </div>
                 </div>
                 <div class="col s4">
                     <div class="card-deck">
