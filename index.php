@@ -1,6 +1,6 @@
 <?php
 
-header('Location: frontend\pages\idLogin.php');
+header('Location: frontend\pages\idLoginPage.php');
 exit;
 
 ?>
