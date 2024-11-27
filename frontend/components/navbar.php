@@ -5,7 +5,9 @@
         <div class="col s2"></div>
         <div class="col s8">
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Logo</a>
+                <a href="#" class="brand-logo">
+                    <img id="logo" src="../dat/logo.png" alt="Logo" style="height: 50px; vertical-align: middle;">
+                    Timetracker</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="sass.html">Dashboard</a></li>
                     <li><a href="badges.html">Anträge</a></li>

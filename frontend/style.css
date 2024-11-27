@@ -11,3 +11,9 @@
 .card-login {
     margin-top: 30% !important;
 }
+nav {
+    background-color: rgb(40, 62, 86) !important;
+}
+#logo {
+    margin-top: -5px;
+}

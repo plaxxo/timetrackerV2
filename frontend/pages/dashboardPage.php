@@ -91,7 +91,6 @@ if ($hour >= 6 && $hour < 11) {
                     <p>This is the third card.</p>
                 </div>
             </div>
-
         </div>
         <div class="col s2"></div>
     </div>
