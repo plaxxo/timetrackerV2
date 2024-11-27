@@ -10,12 +10,10 @@ include "..\components\header.php";
           <div class="card-content ">
             <span class="card-title">Login</span>
             <?php
-              session_start();
               if (isset($_SESSION['error_message'])) {
                 echo '<div class="error">' . $_SESSION['error_message'] . '</div>';
                 unset($_SESSION['error_message']);
               }
-              session_destroy()
             ?>
             <form action="..\..\src\userLogin.php" method="post">
               <div class="input-field">

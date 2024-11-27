@@ -9,11 +9,16 @@
                     <img id="logo" src="../dat/logo.png" alt="Logo" style="height: 50px; vertical-align: middle;">
                     Timetracker</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Dashboard</a></li>
-                    <li><a href="badges.html">Anträge</a></li>
-                    <li><a href="collapsible.html">Kalender</a></li>
-                    <li>
-                        <a href="collapsible.html">
+                    <li><a href="../pages/dashboardPage.php">Dashboard</a></li>
+                    <li><a href="../pages/overviewPage.php">Übersicht</a></li>
+                    <li><a href="collapsible.html"
+                           class="<?php if (isset($_SESSION['is_checked_in'])) {
+                                    if ($_SESSION['is_checked_in'] === true) {
+                                    echo 'green';
+                                     } else {
+                                        echo 'red';
+                                    }
+                                }?>">
                             <i class="material-icons">account_circle</i>
                         </a>
                     </li>

@@ -23,7 +23,7 @@ if ($hour >= 6 && $hour < 11) {
                 <div class="card-content">
                     <div style="display: flex; justify-content: space-between;">
                         <span class="card-title"><?= $greeting ?>
-                            <?php session_start();
+                            <?php
                             if (isset($_SESSION['surname'])): ?>
                                 <?= $_SESSION['surname'] ?>
                             <?php endif; ?>
@@ -50,45 +50,30 @@ if ($hour >= 6 && $hour < 11) {
             </div>
 
             <div class="row">
-                <div class="col s6">
+                <div class="col s4">
                     <div class="card-deck">
-                        <div class="card hoverable">
+                        <div class="card hoverable green lighten-3" onclick="location.href='../../src/checkIn.php';"
+                             style="cursor: pointer;">
                             <div class="card-content">
                                 <span class="card-title">Check In</span>
-                                <p>This is the first card.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-content">
-                                <span class="card-title">Card 2</span>
-                                <p>This is the second card.</p>
+                                <p>Starte deine Schicht.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col s6">
+                <div class="col s4">
+
+                </div>
+                <div class="col s4">
                     <div class="card-deck">
-                        <div class="card">
+                        <div class="card hoverable red lighten-3" onclick="location.href='../../src/checkOut.php';"
+                             style="cursor: pointer;">
                             <div class="card-content">
                                 <span class="card-title">Check Out</span>
-                                <p>This is the third card.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-content">
-                                <span class="card-title">Card 4</span>
-                                <p>This is the fourth card.</p>
+                                <p>Beende deine Schicht.</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <span class="card-title">Che</span>
-                    <span class="card-title">Che</span>
-                    <p>This is the third card.</p>
                 </div>
             </div>
         </div>

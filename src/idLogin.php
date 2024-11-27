@@ -29,6 +29,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['name'] = $row['name'];
         $_SESSION['surname'] = $row['surname'];
         $_SESSION['is_logged_in'] = true;
+
+        $stmt2 = $conn->prepare("SELECT * FROM time_entries WHERE user_id = ? AND clock_out IS NULL AND DATE(clock_in) = CURDATE()");
+        $stmt2->bind_param("i", $_SESSION['user_id']);
+        $stmt2->execute();
+        $result2 = $stmt2->get_result();
+        if ($result2->num_rows > 0) {
+            $_SESSION['is_checked_in'] = true;
+        } else {
+            $_SESSION['is_checked_in'] = false;
+        }
+
         header("Location: ../frontend/pages/dashboardPage.php"); // Redirect to the home page
         exit();
     } else {
