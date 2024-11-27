@@ -23,17 +23,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
 
     if ($result->num_rows > 0) {
-        // Successful login
         session_start();
-        $_SESSION['user_id'] = $result->fetch_assoc()['id']; // Assuming you have a user ID
-        $_SESSION['username'] = $username;
+        $row = $result->fetch_assoc();
+        $_SESSION['user_id'] = $row['id'];
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['name'] = $row['name'];
+        $_SESSION['surname'] = $row['surname'];
         $_SESSION['is_logged_in'] = true;
-        header("Location: home.php"); // Redirect to the home page
+        header("Location: ../frontend/pages/dashboardPage.php");
         exit();
     } else {
         session_start();
         $_SESSION['error_message'] = "Benutzername oder Passwort nicht gefunden";
-        header("Location: /frontend/pages/userLogin.php");
+        header("Location: /frontend/pages/userLoginPage.php");
         exit();
     }
 }

@@ -2,12 +2,12 @@
 include "..\components\header.php";
 ?>
 
-<body>
+<body class="body-login">
   <div class="container">
     <div class="row">
       <div class="col s12 m6 offset-m3">
-        <div class="card">
-          <div class="card-content">
+        <div class="card card-login">
+          <div class="card-content ">
             <span class="card-title">Login</span>
             <?php
               session_start();
@@ -29,7 +29,7 @@ include "..\components\header.php";
               <button class="btn waves-effect waves-light" type="submit" name="submit">Anmelden</button>
             </form>
             <br>
-            <p>Karte dabei? <a href="idLogin.php">Zum Login</a></p>
+            <p>Karte dabei? <a href="idLoginPage.php">Zum Login</a></p>
           </div>
         </div>
       </div>

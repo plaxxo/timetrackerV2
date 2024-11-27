@@ -22,17 +22,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
 
     if ($result->num_rows > 0) {
-        // Successful login
         session_start();
-        $_SESSION['user_id'] = $result->fetch_assoc()['id']; // Assuming you have a user ID
-        $_SESSION['username'] = $result->fetch_assoc()['username'];
+        $row = $result->fetch_assoc();
+        $_SESSION['user_id'] = $row['id']; // Assuming you have a user ID
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['name'] = $row['name'];
+        $_SESSION['surname'] = $row['surname'];
         $_SESSION['is_logged_in'] = true;
-        header("Location: home.php"); // Redirect to the home page
+        header("Location: ../frontend/pages/dashboardPage.php"); // Redirect to the home page
         exit();
     } else {
         session_start();
         $_SESSION['error_message'] = "Mitarbeiter wurde nicht gefunden.";
-        header("Location: /frontend/pages/idLogin.php");
+        header("Location: /frontend/pages/idLoginPage.php");
         exit();
     }
 }

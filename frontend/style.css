@@ -1,3 +1,13 @@
 .error {
     color: red;
 }
+
+.body-login {
+    background-image: url('dat/login_bg.jpg'); /* Replace with your image path */
+    background-size: cover; /* Or contain, depending on your needs */
+    background-repeat: no-repeat;
+}
+
+.card-login {
+    margin-top: 30% !important;
+}
