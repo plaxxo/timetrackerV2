@@ -3,14 +3,39 @@
 }
 
 .body-login {
-    background-image: url('dat/login_bg.jpg'); /* Replace with your image path */
-    background-size: cover; /* Or contain, depending on your needs */
+    background-image: url('dat/login_bg.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
+/* Login */
 .card-login {
     margin-top: 30% !important;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 10px !important;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2) !important;
+    padding: 20px !important;
 }
+
+.card-title img {
+    width: 35px !important;
+}
+
+.card-logo {
+    vertical-align: middle;
+    margin-top: -75px;
+    margin-left: 495px;
+}
+
+.login-text {
+    height: auto;
+}
+
+label {
+    color: black !important;
+}
+
 nav {
     background-color: rgb(40, 62, 86) !important;
 }
