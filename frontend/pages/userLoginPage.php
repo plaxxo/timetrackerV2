@@ -8,7 +8,9 @@ include "..\components\header.php";
       <div class="col s12 m6 offset-m3">
         <div class="card card-login">
           <div class="card-content ">
-            <span class="card-title">Login</span>
+            <span class="card-title">Login
+              <img class="card-logo" src="../dat/logo.png" alt="Logo">
+            </span>
             <?php
               session_start();
               if (isset($_SESSION['error_message'])) {
