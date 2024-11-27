@@ -53,7 +53,7 @@ if ($hour >= 6 && $hour < 11) {
                 <div class="col s4">
                     <div class="card-deck">
                         <div class="card hoverable green lighten-3" onclick="location.href='../../src/checkIn.php';"
-                             style="cursor: pointer;">
+                            style="cursor: pointer;">
                             <div class="card-content">
                                 <span class="card-title">Check In</span>
                                 <p>Starte deine Schicht.</p>
@@ -67,7 +67,7 @@ if ($hour >= 6 && $hour < 11) {
                 <div class="col s4">
                     <div class="card-deck">
                         <div class="card hoverable red lighten-3" onclick="location.href='../../src/checkOut.php';"
-                             style="cursor: pointer;">
+                            style="cursor: pointer;">
                             <div class="card-content">
                                 <span class="card-title">Check Out</span>
                                 <p>Beende deine Schicht.</p>
@@ -80,4 +80,3 @@ if ($hour >= 6 && $hour < 11) {
         <div class="col s2"></div>
     </div>
 </div>
-

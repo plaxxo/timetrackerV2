@@ -1,14 +1,10 @@
-.error {
-    color: red;
-}
-
+/* Login */
 .body-login {
     background-image: url('dat/login_bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-/* Login */
 .card-login {
     margin-top: 30% !important;
     background-color: rgba(255, 255, 255, 0.4) !important;
@@ -39,6 +35,20 @@ label {
 nav {
     background-color: rgb(40, 62, 86) !important;
 }
+
 #logo {
     margin-top: -5px;
+}
+
+.error {
+    color: red;
+}
+
+/* Dashboard */
+body {
+    background-image: url('dat/login_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    height: 100vh;
 }
