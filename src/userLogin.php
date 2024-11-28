@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         session_start();
         $_SESSION['error_message'] = "Benutzername oder Passwort nicht gefunden";
-        header("Location: /frontend/pages/userLoginPage.php");
+        header("Location: ../frontend/pages/userLoginPage.php");
         exit();
     }
 }

@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         session_start();
         $_SESSION['error_message'] = "Mitarbeiter wurde nicht gefunden.";
-        header("Location: /frontend/pages/idLoginPage.php");
+        header("Location: ../frontend/pages/idLoginPage.php");
         exit();
     }
 }

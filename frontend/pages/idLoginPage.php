@@ -17,7 +17,7 @@ include "..\components\header.php";
                   unset($_SESSION['error_message']);
               }
             ?>
-            <form action="..\..\src\idLogin.php" method="post">
+            <form action="../../src/idLogin.php" method="post">
               <div class="input-field">
                 <input type="text" name="employeeID" id="employeeID" required>
                 <label for="employeeID">Mitarbeiternummer</label>
