@@ -6,10 +6,8 @@ require_once '../../src/config.php';
 
 $db = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
-// Benutzer-ID aus der Anfrage abrufen (Beispiel)
-$userId = 2;
+$userId = $_SESSION['user_id'];
 
-// Abfrage ausführen
 $ergebnis = $db->query("SELECT * FROM time_entries WHERE user_id = $userId");
 
 

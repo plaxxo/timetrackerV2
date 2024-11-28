@@ -47,10 +47,14 @@ nav {
 /* Dashboard */
 body {
     background-image: url('dat/login_bg.jpg');
-    background-size: cover;
+   /* background-size: cover; */
     background-repeat: no-repeat;
     backdrop-filter: blur(10px);
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.bold-text {
+    font-weight: 400 !important;
 }

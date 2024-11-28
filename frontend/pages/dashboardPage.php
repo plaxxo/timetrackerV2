@@ -14,7 +14,7 @@ if ($hour >= 6 && $hour < 11) {
 }
 ?>
 
-<div class="container">
+<div class="container"">
     <div class="row">
         <div class="col s2"></div>
         <div class="col s8">
@@ -87,6 +87,23 @@ if ($hour >= 6 && $hour < 11) {
                                 <span class="card-title">Check Out</span>
                                 <p>Beende deine Schicht.</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12">
+                    <div class="card blue lighten-4">
+                    <div class="card-image">
+                        <img src="../dat/mensa.jpg">
+                        <span class="card-title white-text text-darken-4 bold-text">Factory Mensa Informationen</span>
+                    </div>
+
+                        <div class="card-content">
+                            <p>Herzlich Willkommen in der Fabrik Mensa! Genießen Sie unsere täglichen Spezialitäten.</p>
+                            <p>Öffnungszeiten: 11:30 - 14:00 Uhr</p>
+                            <p>Adresse: Industriering 10, 12345 Musterstadt</p>
                         </div>
                     </div>
                 </div>
